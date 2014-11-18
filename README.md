@@ -22,13 +22,16 @@ Or install it yourself as:
 
 In your controller:
 
+
 ```Ruby
 # app/controllers/fancy_controller.rb
- 
+
 class Fancycontroller < ApplicationController
-  include ParamsFor
-  
-  # Creates a Fancy object by checking and validating params 
+  include ParamsValidator::Connectors::ParamsFor
+
+  params_for :fancy, only: [:create]
+
+  # Creates a Fancy object by checking and validating params
   # before that
   #
   def create
@@ -36,9 +39,28 @@ class Fancycontroller < ApplicationController
     @fancy = Fancy.new(fancy_params)
     ...
   end
-  
+end
+```
+
+Or you can play with it yourself
+
+```Ruby
+# app/controllers/fancy_controller.rb
+
+class Fancycontroller < ApplicationController
+  include ParamsValidator::Connectors::ParamsFor
+
+  # Creates a Fancy object by checking and validating params
+  # before that
+  #
+  def create
+    ...
+    @fancy = Fancy.new(fancy_params)
+    ...
+  end
+
   protected
-  
+
   # Strong params delegated to ParamValidator::Fancy
   # and memoized in @fancy_params var returned by this method
   #
@@ -53,10 +75,10 @@ Some place in your application ( suggested `app/validators/params_validator/` )
 
 ```Ruby
   # app/validators/param_validator/fancy.rb
- 
+
   class ParamValidator::Fancy < ParamValidator::Base
     attr_accessor :user_id, :fancy_name, :fancy_description
-    
+
     validates :user_id, :fancy_name, presence: true
     validates :user_id, integer: true
   end
