@@ -1,13 +1,13 @@
-# ParamsValidator
+# ParamsFor
 
-Use service objects and the power of `ActiveSupport::Validations` to easy validate params in controller.
+Use service objects and the power of `ActiveModel::Validations` to easy validate params in controller.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'params_validator'
+gem 'params_for'
 ```
 
 And then execute:

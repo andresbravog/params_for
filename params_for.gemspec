@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'params_validator/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "params_validator"
+  spec.name          = "params_for"
   spec.version       = ParamsValidator::VERSION
   spec.authors       = ["andresbravog"]
   spec.email         = ["andresbravog@gmail.com"]
   spec.summary       = %q{Params Validatior for controllers using active_model validations.}
   spec.description   = %q{With Params validator oyu should be able to perform controller params validation easy and with any kind of type, format, or custom validation you already know and use in oyur models. }
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/andresbravog/params_for"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
