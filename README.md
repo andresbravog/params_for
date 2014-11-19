@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/andresbravog/params_for.svg)](https://travis-ci.org/andresbravog/params_for)
+
 # ParamsFor
 
 Use service objects and the power of `ActiveModel::Validations` to easy validate params in controller.
