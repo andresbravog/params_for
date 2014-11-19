@@ -1,5 +1,5 @@
 [![Build
-Status](https://travis-ci.org/andresbravog/params_for.svg)](https://travis-ci.org/andresbravog/params_for)
+Status](https://travis-ci.org/andresbravog/params_for.svg)](https://travis-ci.org/andresbravog/params_for) [![Code Climate](https://codeclimate.com/github/andresbravog/params_for/badges/gpa.svg)](https://codeclimate.com/github/andresbravog/params_for) [![Test Coverage](https://codeclimate.com/github/andresbravog/params_for/badges/coverage.svg)](https://codeclimate.com/github/andresbravog/params_for)
 
 # ParamsFor
 
