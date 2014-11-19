@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install params_validator
+    $ gem install params_for
 
 ## Usage
 
@@ -27,7 +27,7 @@ In your controller:
 # app/controllers/fancy_controller.rb
 
 class Fancycontroller < ApplicationController
-  include ParamsValidator::Connectors::ParamsFor
+  include ParamsFor::Connectors::Glue
 
   params_for :fancy, only: [:create]
 
@@ -48,7 +48,7 @@ Or you can play with it yourself
 # app/controllers/fancy_controller.rb
 
 class Fancycontroller < ApplicationController
-  include ParamsValidator::Connectors::ParamsFor
+  include ParamsFor::Connectors::Glue
 
   # Creates a Fancy object by checking and validating params
   # before that
@@ -71,7 +71,7 @@ class Fancycontroller < ApplicationController
 end
 ```
 
-Some place in your application ( suggested `app/validators/params_validator/` )
+Some place in your application ( suggested `app/validators/params_for/` )
 
 ```Ruby
   # app/validators/param_validator/fancy.rb
@@ -86,7 +86,7 @@ Some place in your application ( suggested `app/validators/params_validator/` )
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/params_validator/fork )
+1. Fork it ( https://github.com/[my-github-username]/params_for/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

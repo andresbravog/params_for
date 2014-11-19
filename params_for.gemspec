@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'params_validator/version'
+require 'params_for/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "params_for"
-  spec.version       = ParamsValidator::VERSION
+  spec.version       = ParamsFor::VERSION
   spec.authors       = ["andresbravog"]
   spec.email         = ["andresbravog@gmail.com"]
   spec.summary       = %q{Params Validatior for controllers using active_model validations.}

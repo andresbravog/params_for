@@ -1,6 +1,6 @@
 # app/validators/param_validator/base.rb
 
-module ParamsValidator
+module ParamsFor
   class Base
     include ActiveModel::Validations
 

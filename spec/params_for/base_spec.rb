@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe ParamsValidator::Base do
+describe ParamsFor::Base do
 
   let(:validator_klass) do
     unless defined?(DummyValidator)
-      class DummyValidator < ParamsValidator::Base
+      class DummyValidator < ParamsFor::Base
         attr_accessor :id, :name, :type
 
         validates :type, inclusion: { in: %w{task project}, allow_nil: true }
@@ -43,7 +43,7 @@ describe ParamsValidator::Base do
   describe 'attributes_hash' do
     let(:validator_klass_with_modified_accessor) do
       unless defined?(NewDummyValidator)
-        class NewDummyValidator < ParamsValidator::Base
+        class NewDummyValidator < ParamsFor::Base
           attr_accessor :id, :name
 
           def id

@@ -1,5 +1,5 @@
 require 'action_controller'
-require 'params_validator'
+require 'params_for'
 require 'ostruct'
 
 module Rails
@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   resources :dummy, only: [:index]
 end
 
-class ParamsValidator::Dummy < ParamsValidator::Base
+class ParamsFor::Dummy < ParamsFor::Base
   attr_accessor :id, :name
 
   validates :id, presence: true
@@ -56,7 +56,7 @@ end
 
 class DummyController < ActionController::Base
   include Rails.application.routes.url_helpers
-  include ParamsValidator::Connectors::ParamsFor
+  include ParamsFor::Connectors::Glue
 
   params_for :dummy
 

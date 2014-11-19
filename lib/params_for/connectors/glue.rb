@@ -1,8 +1,8 @@
 require 'active_support/concern'
 
-module ParamsValidator
+module ParamsFor
   module Connectors
-    module ParamsFor
+    module Glue
       extend ActiveSupport::Concern
 
       module ClassMethods
@@ -38,7 +38,7 @@ module ParamsValidator
         if options[:class]
           validator_klass = options[:class]
         else
-          validator_name = "ParamsValidator::#{name.to_s.classify}"
+          validator_name = "ParamsFor::#{name.to_s.classify}"
           validator_klass = validator_name.constantize
         end
 
