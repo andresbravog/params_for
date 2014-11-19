@@ -13,14 +13,12 @@ module ParamsValidator
         # @option options [Boolean] :class class of the validator
         # @option options [Array] any option that before_action takes
         def params_for(name, options = {})
-          # define method for given args
-          # define before_action with given options
           method_name = "#{name}_params"
           define_method(method_name) do
-           params_for(name, options)
+            return params_for(name, options)
           end
           return if options[:before_action] == false
-          send(:before_action, options)
+          send(:before_action, method_name.to_sym, options)
         end
       end
 
@@ -47,7 +45,7 @@ module ParamsValidator
         validator = validator_klass.new(params)
 
         unless validator.valid?
-          render status: :bad_request, json: validator.errors.to_json and return
+          render status: :bad_request, json: validator.errors.to_json and return false
         end
 
         instance_variable_set(instance_var_name, validator.to_params)

@@ -7,6 +7,6 @@ module ParamsValidator
   autoload :Base,  'params_validator/base'
 
   module Connectors
-    autoload :ParamsFor,  'params_validator/base'
+    autoload :ParamsFor,  'params_validator/connectors/params_for'
   end
 end
