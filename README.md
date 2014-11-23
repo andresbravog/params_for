@@ -7,7 +7,7 @@ Use service objects and the power of `ActiveModel::Validations` to easy validate
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile`:
 
 ```ruby
 gem 'params_for'
@@ -29,7 +29,7 @@ In your controller:
 ```Ruby
 # app/controllers/fancy_controller.rb
 
-class Fancycontroller < ApplicationController
+class FancyController < ApplicationController
   include ParamsFor::Connectors::Glue
 
   params_for :fancy, only: [:create]
@@ -50,7 +50,7 @@ Or you can play with it yourself
 ```Ruby
 # app/controllers/fancy_controller.rb
 
-class Fancycontroller < ApplicationController
+class FancyController < ApplicationController
   include ParamsFor::Connectors::Glue
 
   # Creates a Fancy object by checking and validating params
