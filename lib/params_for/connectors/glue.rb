@@ -35,12 +35,7 @@ module ParamsFor
         instance_var = instance_variable_get(instance_var_name)
         return instance_var if instance_var.present?
 
-        if options[:class]
-          validator_klass = options[:class]
-        else
-          validator_name = "ParamsFor::#{name.to_s.classify}"
-          validator_klass = validator_name.constantize
-        end
+        validator_klass = options[:class].presence || "ParamsFor::#{name.to_s.classify}".constantize
 
         validator = validator_klass.new(params)
 
