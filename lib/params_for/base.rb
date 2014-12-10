@@ -54,7 +54,7 @@ module ParamsFor
     #
     # @return [Boolean]
     def attribute?(key)
-      self.class.instance_methods.include? key.to_sym
+      self.class.attributes.include? key.to_sym
     end
 
     # Return the attributes of the validator filtered by
