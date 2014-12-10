@@ -77,7 +77,7 @@ end
 Some place in your application ( suggested `app/validators/params_for/` )
 
 ```Ruby
-  # app/validators/param_validator/fancy.rb
+  # app/validators/params_for/fancy.rb
 
   class ParamValidator::Fancy < ParamValidator::Base
     attr_accessor :user_id, :fancy_name, :fancy_description
