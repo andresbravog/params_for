@@ -64,7 +64,7 @@ class FancyController < ApplicationController
 
   protected
 
-  # Strong params delegated to ParamValidator::Fancy
+  # Strong params delegated to ParamsFor::Fancy
   # and memoized in @fancy_params var returned by this method
   #
   # @return [HashwithIndifferentAccess]
@@ -79,7 +79,7 @@ Some place in your application ( suggested `app/validators/params_for/` )
 ```Ruby
   # app/validators/params_for/fancy.rb
 
-  class ParamValidator::Fancy < ParamValidator::Base
+  class ParamsFor::Fancy < ParamsFor::Base
     attr_accessor :user_id, :fancy_name, :fancy_description
 
     validates :user_id, :fancy_name, presence: true
