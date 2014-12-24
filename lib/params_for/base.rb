@@ -4,7 +4,7 @@ module ParamsFor
   class Base
     include ActiveModel::Validations
 
-    # Memoizes the accessor atrributes in the @attributes variable to be able
+    # Memoizes the accessor attributes in the @attributes variable to be able
     # to list them and access them
     #
     def self.attr_accessor(*vars)
@@ -13,7 +13,7 @@ module ParamsFor
       super(*vars)
     end
 
-    # Accessor method to the memoized attrubutes setted by the attr_accessor method
+    # Accessor method to the memoized attributes setted by the attr_accessor method
     #
     # @return [Array(Symbols)]
     def self.attributes
@@ -40,7 +40,7 @@ module ParamsFor
       self.class.attributes
     end
 
-    # Returns the given attibutes validated and parsed if needed
+    # Returns the given attributes validated and parsed if needed
     # to be used in the controller
     #
     # @return [HashWithIndifferentAccess]
