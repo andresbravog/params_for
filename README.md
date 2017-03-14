@@ -74,7 +74,7 @@ class FancyController < ApplicationController
 end
 ```
 
-Some place in your application ( suggested `app/validators/params_for/` )
+Some place in your application ( suggested `app/validators/param_validator/` )
 
 ```Ruby
   # app/validators/params_for/fancy.rb
